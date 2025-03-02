@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(172, 0, 77);
+    color: white;
+}
+
+
+
+/* ------------ HEADER -- */
+header {
+    width: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.redeye{
+    width: 800px;
+}
+
+h2 {
+    font-family: "parfumerie-script", sans-serif;
+font-weight: 400;
+font-style: normal;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 250px;
+}
+
+h1{
+    font-size: 50px;
+
+    font-family: "futura-pt", sans-serif;
+font-weight: 300;
+font-style: normal;
+margin-top: 30px;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* POEM SECTION */
+
+#lyrics {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.chosen {
+    color: red;
+}
+
+.text p{
+    font-family: "futura-pt", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 2;
+}
+
+
+
+
+.word:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.laughing{
+    display: inline-block;
+    color:yellow;
+    background-color:green;
+    padding: 0 10px 0 10px;
+    margin: 0 10px 0 10px;
+    transition: all 1s;
+}
+
+.laughing:hover{
+    background-color: brown;
+    color:aqua;
+    cursor: crosshair;
+    transform: rotate(180deg);
+}
+
+.none{
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    margin: 0 10px 0 10px;
+    transition: all 1.5s;
+    color:white;
+    font-weight: bold;
+    text-transform: bold;
+}
+
+.red{
+    color:red;
+}
+
+.bold{
+    font-family: "futura-pt", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.none:hover{
+    cursor: pointer;
+    opacity: 0;
+    transform: translate(100px,0) ;
+
+}
+
+.hid{
+    display: inline-block;
+    background-color: aqua;
+    color:red;
+    padding: 0 10px 0 10px;
+    margin: 0 10px 0 10px;
+    transition: all 2s;
+}
+
+.hid:hover{
+    opacity: 0;
+    transform: translate(-20px,-20px) scale(0.5,0.5);
+}
+
+.heart{
+    width: 300px;
+    height:300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: heartmove 8s 0s infinite alternate;
+    /* animation, name, duraiton, when start, how many occur, direction */
+}
+
+@keyframes heartmove {
+    100%{top: 0; left: 0; opacity: 1}
+    0% {top: 500px;}
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 100vh; /* Start the animation from the bottom of the page */
+    right: 0; /* Aligns the clock to the right side */
+    animation: clockmove 6s 0s infinite alternate;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes clockmove {
+    100% {
+        top: 0; /* Moves to the top of the page */
+        right: 0;
+        opacity: 1;
+    }
+    0% {
+        top: 100vh; /* Starts at the bottom of the page */
+    }
+}
+
+.moon2{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: spinmoon 5s 1s infinite alternate;
+}
+
+@keyframes spinmoon{
+    0% {
+        bottom: 0;
+        right: 0;
+        transform: rotate(0deg) scale (1,1);
+        opacity: 0.5;
+    }
+    100%{
+        bottom: 500px;
+        right:500px;
+        transform: rotate(360deg) scale(4,4);
+        opacity: 1;
+
+
+    }
+}
+
+
+
+
+.moon3{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: fademoon 10s 3s infinite alternate;
+}
+
+@keyframes fademoon{
+    0% {
+        opacity:1;
+        transform: scale(1,1);
+    }
+    100% {
+        opacity: 0.2;
+        transform: scale(0.3,0.3);
+    }
+}
